@@ -123,7 +123,54 @@ namespace Lesson2
                     }
 
                     break;
+                case 6:
+                    int num6_1 = 200;
+                  while (num6_1 % 17 !=0)
+                    {
+                        num6_1++;
+                    }
+                    Console.WriteLine(num6_1);
+                    break;
+                case 7:
+                    double distance = 10;
+                    int count = 0;
+                    double current_distance = 10;
+                    while (distance  < 21) 
+                    {
+                        distance += (distance / 100 * 5);
+                      
+                        count++;
+                    }
+                    while(current_distance >= 100)
+                    {
+                        current_distance += distance;
+                    }
+                    Console.WriteLine($"Человек пробежит 20 км в {count} день");
+                    Console.WriteLine($"Сумма пробега будет больше 100км в {current_distance} день");
+                        break;
+                case 8:
+                    Console.WriteLine("Введите число для нахождения факториала: ");
+                    int num8_1 = int.Parse(Console.ReadLine());
+                    int factorial = 1;
+                    for(int i = 1; i <=num8_1; i++)
+                    {
+                        factorial *= i;
+                    }
+                    Console.WriteLine($"Факториал числа {num8_1} равен {factorial}");
+                    break;
+                case 9:
+                    Console.Write("Введите натуральное число: ");
+                    int num = int.Parse(Console.ReadLine());
 
+                    int delitel = 2;
+                    while (num % delitel != 0)
+                    {
+                        delitel++;
+                    }
+
+                    Console.WriteLine($"Наименьший делитель числа {num} (отличный от 1) равен {delitel}");
+
+                    break;
             }
             Console.ReadKey();
         }
